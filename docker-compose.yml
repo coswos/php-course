@@ -1,10 +1,9 @@
 version: '3'
 
 services:
-  php:
-    image: server:for_php
+  my_container:
+    build: ./php
+    volumes:
+      - ./src:/var/www/html
     ports:
       - "8080:80"
-    volumes:
-      - ${PWD}:/var/www/html
-
