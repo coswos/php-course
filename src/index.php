@@ -1,30 +1,34 @@
 <?php
 
+$personal = [
+    [
+        'age' => 21,
+        'price' => 20,
+        'currency' => 'usd'
+    ],
+    [
+        'age' => 18,
+        'price' => 16,
+        'currency' => 'usd'
+    ],
+    [
+        'age' => 22,
+        'price' => 21,
+        'currency' => 'usd'
+    ]
+];
 
-$c = 1;
-while ($c < 6) {
-    echo "Counter while: $c<br>";
-    $c++;
+
+$counter = count($personal);
+
+for ($i = 0; $i < $counter; $i++) {
+    echo 'age: ', $personal[$i]['age'], '<br>';
 }
-
-echo "<hr>";
-
-for ($c = 1; $c < 6; $c++) {
-    echo "Counter for: $c<br>";
-}
-
-echo "<hr>";
-
-$colors = ["red", "green", "blue", "yellow"];
-
-for ($i = 0; $i < count($colors); $i++) {
-    echo $colors[$i], PHP_EOL;;
-}
-
-echo "<hr>";
 
 $index = 0;
-while ($index < count($colors)) {
-    echo $colors[$index], PHP_EOL;
+
+echo '<hr>';
+while ($index < $counter) {
+    echo  'age: ', $personal[$index]['age'], '<br>';
     $index++;
 }
