@@ -1,12 +1,12 @@
 <?php
 
 $personal = [
-    [
+    'John' => [
         'age' => 21,
         'price' => 20,
         'currency' => 'usd'
     ],
-    [
+    'Alice' => [
         'age' => 18,
         'price' => 16,
         'currency' => 'usd'
@@ -18,17 +18,21 @@ $personal = [
     ]
 ];
 
-
-$counter = count($personal);
-
-for ($i = 0; $i < $counter; $i++) {
-    echo 'age: ', $personal[$i]['age'], '<br>';
-}
-
-$index = 0;
+foreach ($personal as $person){
+    foreach ($person as $key => $val){
+        echo "$key = $val", PHP_EOL, '<br>';
+    }
+    echo '<br>';
+};
 
 echo '<hr>';
-while ($index < $counter) {
-    echo  'age: ', $personal[$index]['age'], '<br>';
-    $index++;
+
+$person = [
+    'age' => 18,
+    'name' => 'John',
+    'gender' => 'male'
+];
+
+foreach ($person as $key => $val){
+    echo  "$key = $val <br>";
 }
